@@ -1,0 +1,64 @@
+@import '../../scss/variables.scss';
+@import '../../scss//animations.scss';
+
+.article {
+    width: calc(100% - 2rem);
+    min-width: calc(100% - 2rem);
+    min-height: 350px;
+    padding: 1rem;
+    margin: 0 0.5rem 1rem;
+    border-radius: 5px;
+    position: relative;
+
+    &:hover {
+
+        -webkit-animation: scale-up-article 0.4s cubic-bezier(0.390, 0.575, 0.565, 1.000) both;
+        animation: scale-up-article 0.4s cubic-bezier(0.390, 0.575, 0.565, 1.000) both;
+
+        .fa-link {
+            -webkit-animation: spin 1s linear infinite both;
+            animation: spin 1s linear infinite both;
+        }
+    }
+
+    p {
+        margin-bottom: 0.8rem;
+    }
+
+    h4 {
+        margin-bottom: 0.5rem;
+    }
+
+    img {
+        max-width: calc(100% - 2rem);
+        max-height: 350px;
+        display: block;
+        margin: 0 auto;
+    }
+
+    .fa-link {
+        color: $blue;
+        font-size: 0.9rem;
+        position: absolute;
+        right: 0.5rem;
+        bottom: 0.5rem;
+    }
+
+    .spinner {
+        position: absolute;
+        bottom: 0;
+    }
+}
+
+@media only screen and (min-width: 375px) {
+    .article {
+        width: 343px;
+        min-width: 343px;
+
+        img {
+            max-width: calc(343px - 2rem);
+        }
+    }
+}
+
+@include animation-mixin(scale-up-article, 1.02);

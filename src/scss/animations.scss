@@ -1,0 +1,41 @@
+@mixin animation-mixin($name, $to) {
+    @-webkit-keyframes #{$name} {
+        0% {
+            -webkit-transform: scale(1);
+            transform: scale(1);
+        }
+        100% {
+            -webkit-transform: scale($to);
+            transform: scale($to);
+        }
+      }
+      
+    @keyframes #{$name} {
+        0% {
+            -webkit-transform: scale(1);
+            transform: scale(1);
+        }
+        100% {
+            -webkit-transform: scale($to);
+            transform: scale($to);
+        }
+    }
+}
+
+@-webkit-keyframes spin {
+    from {
+        transform:rotate(0deg);
+    }
+    to {
+        transform:rotate(360deg);
+    }
+}
+
+@keyframes spin {
+    from {
+        transform:rotate(0deg);
+    }
+    to {
+        transform:rotate(360deg);
+    }
+}

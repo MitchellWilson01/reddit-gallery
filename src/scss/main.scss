@@ -1,0 +1,31 @@
+@import './variables.scss';
+
+html {
+    box-sizing: border-box;
+    position: relative;
+    height: 100%;
+    overflow: auto; //hidden
+}
+
+*, *:before, *:after {
+    box-sizing: inherit;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    min-width: 320px;
+    height: 100%;
+    //overflow: auto;
+    position: relative;
+    font-family: 'Roboto', sans-serif;
+}
+
+p {
+    font-size: 0.8rem;
+}
+
+h4 {
+    font-size: 1.1rem;
+    font-weight: 500;
+}

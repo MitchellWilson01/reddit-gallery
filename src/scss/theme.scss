@@ -1,0 +1,87 @@
+@import './variables.scss';
+
+.header-light {
+    background-color: white;
+    box-shadow: 0 4px 2px -2px rgba($gray-5, 0.5);
+}
+
+.header-dark {
+    background-color: $dark-1;
+    box-shadow: 0 4px 2px -2px black;
+}
+
+.subreddit-light {
+    border: solid $gray-2 1px;
+}
+
+.subreddit-dark {
+    border: solid $gray-6 1px;
+}
+
+.gallery-light {
+    background-color: $light;
+}
+
+.gallery-dark {
+    background-color: $dark-2;
+}
+
+.article-light {
+    background-color: white;
+    border: solid $gray-3 1px;
+
+    p {
+        color: $gray-5;
+    }
+
+    h4 {
+        color: black;
+    }
+
+    img {
+        border: solid 1px $gray-1;
+    }
+}
+
+.article-dark {
+    background-color: $dark-1;
+    border: solid $gray-6 1px;
+
+    p {
+        color: $gray-4;
+    }
+
+    h4 {
+        color: white;
+    }
+
+    img {
+        border: solid 1px $gray-7;
+    }
+}
+
+.page-light {
+    background-color: $light;
+}
+
+.page-dark {
+    background-color: $dark-2;
+}
+
+.footer-light {
+    border-top: solid 1px $gray-3;
+    background-color: white;
+
+    h1 {
+        color: black;
+    }
+}
+
+.footer-dark {
+    border-top: solid 1px $gray-6;
+    background-color: $dark-1;
+
+    h1 {
+        color: white;
+    }
+}

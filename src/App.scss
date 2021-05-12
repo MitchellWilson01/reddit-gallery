@@ -1,0 +1,167 @@
+@import './scss/variables.scss';
+@import './scss//animations.scss';
+
+.header {
+    padding: 1rem;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    width: 100%;
+    position: fixed;
+    z-index: 1;
+
+    .subreddit {
+        display: flex;
+        border-radius: 4px;
+        height: 3rem !important;
+    }
+
+    .fa-reddit-alien {
+        padding: 0.65rem;
+        color: white;
+        background-color: $red;
+        font-size: 1.5rem;
+        border-radius: 3px 0 0 3px;
+    }
+
+    input {
+        background-color: $gray-1;
+        border: none;
+        outline: none;
+        padding-left: 1rem;
+        border-radius: 0 3px 3px 0;
+        width: 0;
+        width: 100%;
+        min-width: 0;
+        color: black;
+        font-size: 1rem;
+    }
+
+    button {
+        background-color: transparent;
+        outline: none;
+        border: none;
+    }
+
+    .far {
+        padding: 0rem 1rem 0;
+        padding-right: 0rem;
+        font-size: 1.5rem;
+        color: $blue;
+
+        &:hover {
+            -webkit-animation: scale-up-theme 0.4s cubic-bezier(0.390, 0.575, 0.565, 1.000) both;
+            animation: scale-up-theme 0.4s cubic-bezier(0.390, 0.575, 0.565, 1.000) both;
+        }
+    }
+
+    .sort-options {
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        padding-top: 1rem;
+    }
+
+    .option {
+        width: 4.5rem;
+        margin: 0 0.5rem;
+        border-radius: 5px;
+        color: white;
+        text-align: center;
+        background-color: $blue;
+        height: 2rem !important;
+        line-height: 2rem !important;
+
+        &:hover {
+            -webkit-animation: scale-up-button 0.4s cubic-bezier(0.390, 0.575, 0.565, 1.000) both;
+            animation: scale-up-button 0.4s cubic-bezier(0.390, 0.575, 0.565, 1.000) both;
+        }
+    }
+
+    .option-menu {
+        background-color: $blue;
+        margin-top: -0.25rem;
+        padding-top: 0.25rem;
+        border-radius: 0 0 5px 5px;
+
+        * {
+            &:hover {
+                background-color: $light-blue;
+            }
+        }
+    }
+}
+
+.dummy {
+    width: 343px;
+    padding: 1rem;
+    margin: 0 0.5rem 1rem;
+}
+
+.gallery {
+    padding-top: 8rem;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.page {
+    text-align: center;
+    padding: 2rem 0 4rem;
+    width: 100%;
+
+    .buttons {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .vert {
+        width: 0.2rem;
+        height: 1rem;
+        background-color: $blue;
+        border-radius: 0.1rem;
+        margin: 0 1.5rem;
+    }
+
+    button {
+        font-size: 1rem;
+        background-color: transparent;
+        color: $blue;
+        border: none;
+        outline: none;
+    }
+
+    p {
+        font-size: 1rem;
+        color: $blue;
+        padding-top: 0.5rem;
+    }
+}
+
+.help {
+    height: 20rem;
+    background-color: $red;
+    color: white;
+}
+
+@media only screen and (min-width: 768px) {
+    .header {
+        .sort-options {
+            width: initial;
+            padding-top: 0.5rem;
+        }
+
+        .option {
+            height: 2rem;
+            line-height: 2rem;
+        }
+
+        .item {
+            margin-left: -0.86rem;
+        }
+    }
+}
+
+@include animation-mixin(scale-up-theme, 1.2);
+@include animation-mixin(scale-up-button, 1.1);
