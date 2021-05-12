@@ -1,6 +1,11 @@
 @import './scss/variables.scss';
 @import './scss//animations.scss';
 
+.App {
+    position: relative;
+    min-height: 100vh;
+}
+
 .header {
     padding: 1rem;
     display: flex;
@@ -107,7 +112,7 @@
 
 .page {
     text-align: center;
-    padding: 2rem 0 4rem;
+    padding: 2rem 0 16rem;
     width: 100%;
 
     .buttons {

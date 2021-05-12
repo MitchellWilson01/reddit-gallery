@@ -29,7 +29,6 @@ const Article = (props) => {
                     </p>
                     <h4>{props.article.title}</h4>
                     {props.loading ? loader : image}
-                    
                     <a href={"https://reddit.com" + props.article.permalink} target="_blank" rel="noreferrer">
                         <i className="fas fa-link"></i>
                     </a>
