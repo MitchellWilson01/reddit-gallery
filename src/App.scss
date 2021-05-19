@@ -77,6 +77,7 @@
         height: 2rem !important;
         line-height: 2rem !important;
         box-shadow: 0px 2px 4px 2px $gray-2;
+        font-size: 1rem;
 
         &:hover {
             -webkit-animation: scale-up-button 0.4s cubic-bezier(0.390, 0.575, 0.565, 1.000) both;
@@ -105,7 +106,7 @@
 }
 
 .gallery {
-    padding-top: 8rem;
+    padding-top: 12rem;
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
@@ -165,6 +166,10 @@
 
         .item {
             margin-left: -0.86rem;
+        }
+
+        .gallery {
+            padding-top: 0;
         }
     }
 }
