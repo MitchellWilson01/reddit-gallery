@@ -76,6 +76,7 @@
         background-color: $blue;
         height: 2rem !important;
         line-height: 2rem !important;
+        box-shadow: 0px 2px 4px 2px $gray-2;
 
         &:hover {
             -webkit-animation: scale-up-button 0.4s cubic-bezier(0.390, 0.575, 0.565, 1.000) both;

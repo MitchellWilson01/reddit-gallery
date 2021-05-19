@@ -20,20 +20,25 @@ const Article = (props) => {
     const image = <img src={props.article.url_overridden_by_dest} alt={props.article.title}></img>
 
     if (!props.loading || props.loading) {
-        return (
-            <article className={props.dark ? "article article-dark" : "article article-light"}>
-                    <p>
-                        <i className="fas fa-hand-point-up"></i> {props.article.score}&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-                        <i className="fas fa-comment"></i> {props.article.num_comments}&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-                        <i className="fas fa-user"></i> u/{props.article.author}
-                    </p>
-                    <h4>{props.article.title}</h4>
-                    {props.loading ? loader : image}
-                    <a href={"https://reddit.com" + props.article.permalink} target="_blank" rel="noreferrer">
-                        <i className="fas fa-link"></i>
-                    </a>
-            </article>
-        );
+        console.log(props.article);
+        if (props.article.hasOwnProperty("url_overridden_by_dest")) {
+            return (
+                <article className={props.dark ? "article article-dark" : "article article-light"}>
+                        <p>
+                            <i className="fas fa-hand-point-up"></i> {props.article.score}&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                            <i className="fas fa-comment"></i> {props.article.num_comments}&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                            <i className="fas fa-user"></i> u/{props.article.author}
+                        </p>
+                        <h4>{props.article.title}</h4>
+                        {props.loading ? loader : image}
+                        <a href={"https://reddit.com" + props.article.permalink} target="_blank" rel="noreferrer">
+                            <i className="fas fa-link"></i>
+                        </a>
+                </article>
+            );
+        } else {
+            return <></>;
+        }
     } else {
         return (
             <article className={props.dark ? "article article-dark" : "article article-light"}>
