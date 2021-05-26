@@ -56,7 +56,6 @@ const App = () => {
                 after = names[2];
                 break;
             default: 
-                //console.log("ERROR: Invalid directions for page change");
                 break;
         }
         
@@ -70,7 +69,7 @@ const App = () => {
         } else if (action === 'PREV' && page > 0) {
             setPage(page - 1);
         } else {
-            //console.log("ERROR: Invalid directions for page change");
+            console.log("ERROR: Invalid directions for page change");
         }
     }
 
