@@ -158,14 +158,14 @@ const App = () => {
                 {mobile ? themeButton : null}
                 <div className="sort-options">
                     <Dropdown 
-                        className="option" 
+                        className={dark ? "option option-dark" : "option option-light"}
                         menuClassName="option-menu"
                         options={sortOptions} 
                         onChange={e => sortByTop(e)} 
                         value={defaultOption} >
                     </Dropdown>
-                    <button className="option" onClick={e => setSortHelper("hot")}>Hot</button>
-                    <button className="option" onClick={e => setSortHelper("new")}>New</button>
+                    <button className={dark ? "option option-dark" : "option option-light"} onClick={e => setSortHelper("hot")}>Hot</button>
+                    <button className={dark ? "option option-dark" : "option option-light"} onClick={e => setSortHelper("new")}>New</button>
                 </div>
                 {mobile ? null : themeButton}
             </div>
